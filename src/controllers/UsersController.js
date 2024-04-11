@@ -1,3 +1,5 @@
+const AppError = require('../utils/AppError')
+
 class UsersController {
   /**
    * index - GET para listar vários registros.
@@ -7,9 +9,13 @@ class UsersController {
    * delete - DELETE para remover um registro.
    */
 
-
   create(request, response) {
     const { name, email, password } = request.body
+    
+    if(!name) {
+      throw new AppError('Name is required', 400)
+    }
+
     response.status(201).json({ name, email, password })
   }
 }
