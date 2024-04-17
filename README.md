@@ -8,6 +8,7 @@ Rocketnotes é um projeto que visa listar as informações necessárias para o f
  * NodeJS
  * Express
  * Knex
+ * Bcryptjs
 <hr/>
 
 ## Instalação
